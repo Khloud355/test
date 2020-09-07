@@ -1,0 +1,31 @@
+<div class="admin">
+    <div class="container">
+      <p><a routerLink='/books/new' class="btn btn-primary" > New Product </a></p>
+<table class="table">
+    <thead>
+      <tr>
+       
+        <th scope="col">userName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Age</th>
+        <th scope="col">Discription</th>
+       
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let product of products$ | async">
+    
+        <td>{{product.payload.val().username}}</td>
+        <td>{{product.payload.val().lastname}}</td>
+        <td>{{product.payload.val().age}}</td>
+        <td>{{product.payload.val().discription}}</td>
+        <a [routerLink] = "['/books/', product.key]">edit</a>
+        <!-- <button (click)="ondeleteproduct(i)">delete</button> -->
+        <!-- <td [routerLink] = "['/books' , ]">edit</td> -->
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+</div>

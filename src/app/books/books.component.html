@@ -1,0 +1,46 @@
+<div class="pro">
+    <div class="container">
+        <form #userData = 'ngForm'> 
+            <div class="form-group">
+              <label>username</label>
+              <input class="form-control" [(ngModel)]='username' name="username">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+             </div>
+            <div class="form-group">
+              <label>lastname</label>
+              <input class="form-control" [(ngModel)]='lastname' name="lastname">
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input class="form-control" [(ngModel)]='age' name="age">
+              </div>
+              <div class="form-group">
+                <label>Discription</label>
+                <input class="form-control" [(ngModel)]='discription' name="discription">
+              </div>
+           
+            <!-- <button (click)="addUser(userData)" type="submit" class="btn btn-primary">Submit</button> -->
+            <button (click)="save(userData.value)" type="submit" class="btn btn-primary">Submit</button> 
+          </form>
+          <p>{{userData}}</p>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let u of usersContainer">
+          <td>{{u.firstName}}</td>
+          <td>{{u.lastName}}</td>
+          <td>{{u.userAge}}</td>
+          <td>{{u.userDis}}</td>
+        </tr>
+   
+      </tbody>
+    </table>
+<p>khloud</p>

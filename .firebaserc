@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "forms-f683b"
+  },
+  "targets": {
+    "forms-f683b": {
+      "hosting": {
+        "test": [
+          "forms-f683b"
+        ]
+      }
+    }
+  }
+}
